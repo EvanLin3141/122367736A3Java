@@ -1,7 +1,7 @@
 package org.example;
 
 public class ColourPalette {
-    private int totalColour;
+    private int size;
 
     public ColourPalette() {
         //pass
@@ -12,12 +12,12 @@ public class ColourPalette {
             throw new IllegalArgumentException("Total number of colours needs to be " +
                     "greater than 1 & to the power of 2.");
         } else {
-            this.totalColour = size;
+            this.size = size;
         }
     }
 
     public int getSize() {
-        return this.totalColour;
+        return this.size;
     }
 
 
