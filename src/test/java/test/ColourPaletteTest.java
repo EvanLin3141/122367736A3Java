@@ -21,11 +21,14 @@ class ColourPaletteTest {
     @Test
     void testIfColourPaletteExist() {
         assertNotNull(palette, "Colour Palette Instantiated Successfully");
+        assertNotNull(palette1, "Colour Palette1 Instantiated Successfully");
     }
 
     @Test
     void testTotalNumberOfColourInPalette() {
         assertEquals(2, palette1.getSize());
+        assertEquals(4, palette.getSize());
+
     }
 
     @Test
