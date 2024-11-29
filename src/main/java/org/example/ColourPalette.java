@@ -1,10 +1,10 @@
 package org.example;
 
 public class ColourPalette {
-    private int size;
+    private final int size;
 
     public ColourPalette() {
-        //pass
+        throw new IllegalArgumentException("Need to give ColourPalette a size.");
     }
 
     public ColourPalette(int size) {

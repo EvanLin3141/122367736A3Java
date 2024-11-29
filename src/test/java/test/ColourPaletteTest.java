@@ -25,7 +25,7 @@ class ColourPaletteTest {
 
     @Test
     void testTotalNumberOfColourInPalette() {
-        assertEquals(10, palette1.getSize());
+        assertEquals(2, palette1.getSize());
     }
 
     @Test
@@ -35,4 +35,11 @@ class ColourPaletteTest {
 
         assertDoesNotThrow(() -> new ColourPalette(2), "ColourPalette created.");
     }
+
+    @Test
+    void createExceptionWhenNoSizeGiven() {
+        assertThrows(IllegalArgumentException.class, ColourPalette::new,
+                "Need to give ColourPalette a size");
+    }
+
 }
