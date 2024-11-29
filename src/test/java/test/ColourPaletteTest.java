@@ -45,4 +45,10 @@ class ColourPaletteTest {
                 "Need to give ColourPalette a size");
     }
 
+    @Test
+    void testAddColoursToPalette() {
+        assertDoesNotThrow(() -> palette.add(150,250,100));
+        assertDoesNotThrow(() -> palette1.add(15,25,10));
+    }
+
 }
