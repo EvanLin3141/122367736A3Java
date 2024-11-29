@@ -25,7 +25,11 @@ public class ColourPalette {
     }
 
     public void add(int red, int green, int blue) {
-        this.palette.add(new int[]{red, green, blue});
+        if (this.contains(red, green, blue)) {
+            throw new IllegalArgumentException("Cannot Add The Same Colour");
+        } else {
+            this.palette.add(new int[]{red, green, blue});
+        }
     }
 
     public boolean contains (int red, int green, int blue) {

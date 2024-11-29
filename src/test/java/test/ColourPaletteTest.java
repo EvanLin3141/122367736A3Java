@@ -63,4 +63,12 @@ class ColourPaletteTest {
         assertFalse(palette1.contains(150,250,100));
     }
 
+    @Test
+    void testDoNotAddColourAlreadyExist() {
+        assertThrows(IllegalArgumentException.class, () -> palette.add(150,250,100),
+                "Cannot Add The Same Colour");
+        assertThrows(IllegalArgumentException.class, () -> palette1.add(15,25,10),
+                "Cannot Add The Same Colour");
+    }
+
 }
