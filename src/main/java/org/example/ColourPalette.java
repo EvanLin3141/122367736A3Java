@@ -29,6 +29,8 @@ public class ColourPalette {
             throw new IllegalArgumentException("Cannot Add The Same Colour");
         } else if (!isValidColour(red, green, blue)) {
             throw new IllegalArgumentException("Colour needs to be within 0-255 value of RGB");
+        } else if (palette.size() >= this.size) {
+            throw new IllegalStateException("Palette Exceed Capacity");
         } else {
             this.palette.add(new int[]{red, green, blue});
         }
