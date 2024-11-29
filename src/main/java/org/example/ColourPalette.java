@@ -1,7 +1,11 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class ColourPalette {
     private final int size;
+    private final ArrayList<int[]> palette = new ArrayList<>();
+
 
     public ColourPalette() {
         throw new IllegalArgumentException("Need to give ColourPalette a size.");
@@ -18,6 +22,10 @@ public class ColourPalette {
 
     public int getSize() {
         return this.size;
+    }
+
+    public void add(int red, int green, int blue) {
+        this.palette.add(new int[]{red, green, blue});
     }
 
 
