@@ -2,16 +2,16 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class ColourPalette {
+public class ColourTable {
     private final int size;
     private final ArrayList<int[]> palette = new ArrayList<>();
 
 
-    public ColourPalette() {
+    public ColourTable() {
         throw new IllegalArgumentException("Need to give ColourPalette a size.");
     }
 
-    public ColourPalette(int size) {
+    public ColourTable(int size) {
         if (size <= 1 || (size & (size - 1)) != 0) {
             throw new IllegalArgumentException("Total number of colours needs to be " +
                     "greater than 1 & to the power of 2.");

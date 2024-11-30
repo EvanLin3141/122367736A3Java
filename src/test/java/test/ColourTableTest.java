@@ -1,6 +1,6 @@
 package test;
 
-import org.example.ColourPalette;
+import org.example.ColourTable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -11,15 +11,15 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-class ColourPaletteTest {
-    private ColourPalette palette;
-    private ColourPalette palette1;
+class ColourTableTest {
+    private ColourTable palette;
+    private ColourTable palette1;
 
     @BeforeEach
     void setUp() {
-        palette = new ColourPalette(4);
+        palette = new ColourTable(4);
         palette.add(150,250,100);
-        palette1 = new ColourPalette(2);
+        palette1 = new ColourTable(2);
         palette1.add(15,25,10);
     }
     @Test
@@ -37,15 +37,15 @@ class ColourPaletteTest {
 
     @Test
     void isSizePowerOfTwo() {
-        assertThrows(IllegalArgumentException.class, () -> new ColourPalette(10),
+        assertThrows(IllegalArgumentException.class, () -> new ColourTable(10),
                 "Total number of colours needs to be greater than 1 & to the power of 2.");
 
-        assertDoesNotThrow(() -> new ColourPalette(2), "ColourPalette created.");
+        assertDoesNotThrow(() -> new ColourTable(2), "ColourPalette created.");
     }
 
     @Test
     void createExceptionWhenNoSizeGiven() {
-        assertThrows(IllegalArgumentException.class, ColourPalette::new,
+        assertThrows(IllegalArgumentException.class, ColourTable::new,
                 "Need to give ColourPalette a size");
     }
 /**
